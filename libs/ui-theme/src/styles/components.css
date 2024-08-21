@@ -1,0 +1,356 @@
+@import url('tailwindcss/components.css');
+@import url('./typography.css');
+
+@layer components {
+  .wa-container {
+    @apply container mx-auto w-full px-3 sm:px-6 lg:px-8;
+  }
+
+  .wa-welcome {
+    margin-top: 2.5rem;
+  }
+
+  .wa-welcome h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+
+  .wa-welcome span {
+    display: block;
+    font-size: 1.875rem;
+    font-weight: 300;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .wa-learning-materials {
+    padding: 2.5rem 2rem;
+  }
+
+  .wa-learning-materials h2 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+    line-height: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .wa-hero {
+    @apply bg-secondary-900 text-neutral-900;
+
+    align-items: center;
+    border: none;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 3.5rem;
+  }
+
+  .wa-hero .logo-container {
+    display: none;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .wa-hero .logo-container svg {
+    color: rgb(255 255 255 / 100%);
+    width: 66.6667%;
+  }
+
+  .wa-hero .text-container {
+    @apply text-white;
+
+    padding: 3rem 2rem;
+  }
+
+  .wa-hero .text-container h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    position: relative;
+  }
+
+  .wa-hero .text-container h2 svg {
+    @apply text-accent-500;
+
+    height: 2rem;
+    left: -0.25rem;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+  }
+
+  .wa-hero .text-container a {
+    background-color: rgb(255 255 255 / 100%);
+    border-radius: 0.75rem;
+    color: rgb(55 65 81 / 100%);
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: inherit;
+  }
+
+  .wa-hero .text-container h2 span {
+    margin-left: 2.5rem;
+  }
+
+  .wa-middle-content {
+    align-items: flex-start;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+    margin-top: 3.5rem;
+  }
+
+  .wa-list-item-link {
+    align-items: center;
+    border-radius: 0.75rem;
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    width: 100%;
+  }
+
+  .wa-list-item-link svg:first-child {
+    margin-right: 1rem;
+    height: 1.5rem;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    width: 1.5rem;
+  }
+
+  .wa-list-item-link > span {
+    flex-grow: 1;
+    font-weight: 400;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .wa-list-item-link > span > span {
+    @apply text-neutral-500;
+
+    display: block;
+    flex-grow: 1;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1rem;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .wa-list-item-link svg:last-child {
+    height: 1rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    width: 1rem;
+  }
+
+  .wa-list-item-link:hover {
+    @apply bg-accent-500 text-white;
+  }
+
+  /* .wa-list-item-link:hover > span {} */
+
+  .wa-list-item-link:hover > span > span {
+    @apply text-neutral-200;
+  }
+
+  .wa-list-item-link:hover svg:last-child {
+    transform: translateX(0.25rem);
+  }
+
+  /* #other-links {} */
+
+  .wa-button-pill {
+    padding: 1.5rem 2rem;
+    transition-duration: 300ms;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: center;
+    display: flex;
+  }
+
+  .wa-button-pill svg {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    flex-shrink: 0;
+    width: 3rem;
+  }
+
+  .wa-button-pill > span {
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .wa-button-pill span span {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+  }
+
+  .wa-button-pill:hover svg,
+  .wa-button-pill:hover {
+    color: rgb(255 255 255 / 100%) !important;
+  }
+
+  .wa-nx-console:hover {
+    background-color: rgb(0 122 204 / 100%);
+  }
+
+  .wa-nx-console svg {
+    color: rgb(0 122 204 / 100%);
+  }
+
+  .wa-nx-console-jetbrains {
+    margin-top: 2rem;
+  }
+
+  .wa-nx-console-jetbrains:hover {
+    background-color: rgb(255 49 140 / 100%);
+  }
+
+  .wa-nx-console-jetbrains svg {
+    color: rgb(255 49 140 / 100%);
+  }
+
+  .wa-nx-repo:hover {
+    @apply bg-black;
+  }
+
+  .wa-nx-repo svg {
+    @apply text-black;
+  }
+
+  .wa-nx-cloud {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .wa-nx-cloud > div {
+    align-items: center;
+    display: flex;
+  }
+
+  .wa-nx-cloud > div svg {
+    border-radius: 0.375rem;
+    flex-shrink: 0;
+    width: 3rem;
+  }
+
+  .wa-nx-cloud > div h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .wa-nx-cloud > div h2 span {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+  }
+
+  .wa-nx-cloud p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .wa-nx-cloud pre {
+    margin-top: 1rem;
+  }
+
+  .wa-nx-cloud a {
+    @apply text-neutral-500;
+
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 1.5rem;
+    text-align: right;
+  }
+
+  .wa-nx-cloud a:hover {
+    text-decoration: underline;
+  }
+
+  .wa-commands {
+    padding: 2.5rem 2rem;
+    margin-top: 3.5rem;
+  }
+
+  .wa-commands h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .wa-commands p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .wa-copyright {
+    color: rgb(107 114 128 / 100%);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 3.5rem;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  .wa-copyright svg {
+    color: rgb(252 165 165 / 100%);
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline;
+    margin-top: -0.25rem;
+  }
+
+  @media screen and (width >= 768px) {
+    .wa-hero {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .wa-hero .logo-container {
+      display: flex;
+    }
+
+    .wa-middle-content {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
