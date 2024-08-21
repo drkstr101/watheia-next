@@ -13,10 +13,7 @@
       "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?"
     ],
-    "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/ci.yml",
-      "{workspaceRoot}/.github/workflows/ci.yml"
-    ]
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "nxCloudAccessToken": "OTdjNmQyZDQtOWM0Zi00ZjUwLWJmYTMtYTE4YWE4OGRlMWJmfHJlYWQtd3JpdGU=",
   "plugins": [
@@ -29,9 +26,24 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -44,14 +56,25 @@
     }
   ],
   "targetDefaults": {
-    "e2e-ci--**/*": { "dependsOn": ["^build"] },
+    "e2e-ci--**/*": {
+      "dependsOn": ["^build"]
+    },
     "stylelint": {
       "inputs": ["default", "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"],
       "cache": true
     }
   },
   "generators": {
-    "@nx/next": { "application": { "style": "tailwind", "linter": "eslint" } },
-    "@nx/react": { "library": { "unitTestRunner": "vitest" } }
+    "@nx/next": {
+      "application": {
+        "style": "tailwind",
+        "linter": "eslint"
+      }
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "vitest"
+      }
+    }
   }
 }
