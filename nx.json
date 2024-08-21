@@ -13,12 +13,9 @@
       "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.stylelintrc(.(json|yml|yaml|js))?"
     ],
-    "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/ci.yml",
-      "{workspaceRoot}/.github/workflows/ci.yml"
-    ]
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudAccessToken": "MjU1OGNiNGQtMmQ4Mi00MWQzLWE5OTYtMzIzMmU4OTU0NjYzfHJlYWQ=",
+  "nxCloudAccessToken": "OTdjNmQyZDQtOWM0Zi00ZjUwLWJmYTMtYTE4YWE4OGRlMWJmfHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/next/plugin",
