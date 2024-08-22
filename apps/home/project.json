@@ -5,13 +5,21 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "stylelint": {
-      "executor": "nx-stylelint:lint",
-      "outputs": ["{options.outputFile}"],
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "lintFilePatterns": ["apps/home/**/*.css"]
+        "outputPath": "dist/apps/home"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/home"
+        },
+        "production": {}
       }
     },
+
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
@@ -29,6 +37,14 @@
           "buildTarget": "home:build:production",
           "dev": false
         }
+      }
+    },
+
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/home/**/*.css"]
       }
     }
   }
