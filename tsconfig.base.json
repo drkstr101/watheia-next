@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@watheia/base-ui": ["libs/base-ui/src/index.ts"],
       "@watheia/ui-theme": ["libs/ui-theme/src/index.ts"],
       "@watheia/ui-theme/styles.css": ["libs/ui-theme/src/styles/index.css"]
     }
