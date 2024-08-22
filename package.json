@@ -7,9 +7,10 @@
     "format": "prettier . --write",
     "lint": "nx run-many --target=lint --parallel",
     "stylelint": "nx run-many --target=stylelint --parallel",
-    "test": "nx run-many --target=test --parallel --coverage -- --runInBand",
+    "test": "nx run-many --target=test --parallel --coverage",
     "build": "nx run-many --target=build --parallel",
-    "start": "nx run home:dev --port 4200",
+    "start": "nx run-many --target serve",
+    "start:home": "nx run home:serve:development",
     "e2e": "nx run screenplay:e2e --skip-nx-cache",
     "e2e:setup": "playwright install --with-deps --force",
     "validate": "stackbit validate"

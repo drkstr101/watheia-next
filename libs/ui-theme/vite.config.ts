@@ -41,7 +41,16 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: [
+        'clsx',
+        'framer-motion',
+        'react',
+        'react-aria',
+        'react-stately',
+        'react-dom',
+        'react/jsx-runtime',
+        'use-sync-external-store',
+      ],
     },
   },
 
@@ -49,7 +58,7 @@ export default defineConfig({
     watch: false,
     globals: true,
     environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 
     reporters: ['default'],
     coverage: {
