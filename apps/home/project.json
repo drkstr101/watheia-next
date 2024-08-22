@@ -11,6 +11,25 @@
       "options": {
         "lintFilePatterns": ["apps/home/**/*.css"]
       }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "dependsOn": ["^build"],
+      "options": {
+        "buildTarget": "home:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "home:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "home:build:production",
+          "dev": false
+        }
+      }
     }
   }
 }
