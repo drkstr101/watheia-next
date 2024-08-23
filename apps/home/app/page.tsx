@@ -330,7 +330,7 @@ export function WelcomeView() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="wa-page bg-white">
+    <div className="wa-page bg-neutral-100">
       {/* Header */}
       <Header setMobileMenuOpen={setMobileMenuOpen} mobileMenuOpen={mobileMenuOpen} />
 
@@ -624,8 +624,8 @@ export function WelcomeView() {
                   gradientUnits="userSpaceOnUse"
                   gradientTransform="translate(512 512) rotate(90) scale(512)"
                 >
-                  <stop stopColor="#0891b2" />
-                  <stop offset={1} stopColor="#0284c7" stopOpacity={0} />
+                  <stop stopColor="#22d3ee" />
+                  <stop offset={1} stopColor="#0ea5e9" stopOpacity={0} />
                 </radialGradient>
               </defs>
             </svg>
