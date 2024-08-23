@@ -1,0 +1,19 @@
+{
+  "build": {
+    "client": {
+      "externals": [
+        "@headlessui/react",
+        "@heroicons/react",
+        "clsx",
+        "framer-motion",
+        "react",
+        "react-aria",
+        "rect-aria-components",
+        "react-stately",
+        "react-dom",
+        "react/jsx-runtime"
+      ]
+    },
+    "server": {}
+  }
+}

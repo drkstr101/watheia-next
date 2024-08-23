@@ -7,19 +7,10 @@
   "include": [
     "vite.config.ts",
     "vitest.config.ts",
-    "**/*.test.ts",
-    "**/*.spec.ts",
-    "**/*.test.tsx",
-    "**/*.spec.tsx",
-    "**/*.test.js",
-    "**/*.spec.js",
-    "**/*.test.jsx",
-    "**/*.spec.jsx",
-    "**/*.d.ts",
     "spec/**/*.js",
     "spec/**/*.jsx",
-    "spec/**/*.mjs",
     "spec/**/*.ts",
-    "spec/**/*.tsx"
+    "spec/**/*.tsx",
+    "**/*.d.ts"
   ]
 }

@@ -5,6 +5,41 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/home"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/home"
+        },
+        "production": {}
+      }
+    },
+
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "dependsOn": ["^build"],
+      "options": {
+        "buildTarget": "home:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "home:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "home:build:production",
+          "dev": false
+        }
+      }
+    },
+
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],

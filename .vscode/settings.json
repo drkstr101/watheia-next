@@ -39,14 +39,5 @@
   "stylelint.validate": ["css", "scss", "postcss"],
   "stylelint.packageManager": "yarn",
   "tailwindCSS.lint.invalidConfigPath": "ignore",
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[postcss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
   "cSpell.words": ["recma", "rehype", "shiki"]
 }
