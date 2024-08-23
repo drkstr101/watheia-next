@@ -326,7 +326,7 @@ function Header({ setMobileMenuOpen, mobileMenuOpen }: HeaderProps) {
   );
 }
 
-export function WelcomeView() {
+export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -897,5 +897,3 @@ export function WelcomeView() {
     </div>
   );
 }
-
-export default WelcomeView;
