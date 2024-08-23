@@ -1,13 +1,11 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Button > should render successfully 1`] = `
-<body>
-  <div>
-    <button
-      class="react-aria-Button"
-      data-rac=""
-      type="button"
-    />
-  </div>
-</body>
+<div>
+  <button
+    class="react-aria-Button"
+    data-rac=""
+    type="button"
+  />
+</div>
 `;
