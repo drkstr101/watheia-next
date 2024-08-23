@@ -1,9 +1,14 @@
 /// <reference types='vitest' />
+
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
 import * as path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+
+process.env['NODE_CONFIG_DIR'] = path.join(__dirname, '../../config');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const config = require('config');
 
 export default defineConfig({
   root: __dirname,
@@ -40,15 +45,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [
-        'clsx',
-        'framer-motion',
-        'react',
-        'react-aria',
-        'react-stately',
-        'react-dom',
-        'react/jsx-runtime',
-      ],
+      external: config.get('build.client.externals'),
     },
   },
 

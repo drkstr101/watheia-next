@@ -16,7 +16,11 @@
       "!{projectRoot}/.storybook/**/*",
       "!{projectRoot}/tsconfig.storybook.json"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml",
+      "{workspaceRoot}/config/*.(json|json5|yml|yaml|js|mjs)",
+      "{workspaceRoot}/tailwind-workspace-presets.js"
+    ]
   },
   "nxCloudAccessToken": "OTdjNmQyZDQtOWM0Zi00ZjUwLWJmYTMtYTE4YWE4OGRlMWJmfHJlYWQtd3JpdGU=",
   "plugins": [

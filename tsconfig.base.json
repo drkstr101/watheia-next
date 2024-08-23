@@ -20,5 +20,6 @@
       "@watheia/ui-theme/styles.css": ["libs/ui-theme/src/styles/index.css"]
     }
   },
+  "files": ["config/default.json"],
   "exclude": ["node_modules", "tmp"]
 }
